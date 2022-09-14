@@ -13,9 +13,10 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Happy birthday!"
+            android:textAlignment="center"
             android:textColor="#FF9800"
             android:textSize="60sp" />
     </LinearLayout>
@@ -41,14 +42,17 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="198dp"
-            android:layout_height="107dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="100"
+            android:baselineAligned="true"
             android:orientation="vertical">
 
             <EditText
                 android:id="@+id/editTextTextPersonName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="How many candles?" />
@@ -56,20 +60,25 @@
             <SeekBar
                 android:id="@+id/seekBar"
                 android:layout_width="match_parent"
-                android:layout_height="117dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="0"
             android:orientation="vertical">
 
             <Switch
                 android:id="@+id/switch1"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:text="Frosting" />
 
             <Switch
@@ -81,20 +90,22 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="119dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="0"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="Blow Out" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="Goodbye" />
 
         </LinearLayout>
