@@ -5,4 +5,5 @@ public class CakeModel {
     public int candleCount = 2;
     public boolean frosting = true;
     public boolean candles = true;
+    public String blowLightButton = "Blow Out";
 }

@@ -6,11 +6,11 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
+import android.widget.Button;
 
 public class CakeView extends SurfaceView {
 
     private CakeModel cakeMod;
-
     /* These are the paints we'll use to draw the birthday cake below */
     Paint cakePaint = new Paint();
     Paint frostingPaint = new Paint();
@@ -131,9 +131,12 @@ public class CakeView extends SurfaceView {
         //Then a second cake layer
         canvas.drawRect(cakeLeft, top, cakeLeft + cakeWidth, bottom, cakePaint);
 
-        //Now a candle in the center
-        drawCandle(canvas, cakeLeft + cakeWidth / 3 - candleWidth / 2 , cakeTop);
-        drawCandle(canvas, cakeLeft + (2 * cakeWidth) / 3 - candleWidth/2, cakeTop);
+        //Now candles
+        for (int i = 1; i <= cakeMod.candleCount; i++) {
+            drawCandle(canvas, cakeLeft + ((i * cakeWidth) / (cakeMod.candleCount + 1)) - candleWidth / (cakeMod.candleCount) , cakeTop);
+        }
+        //drawCandle(canvas, cakeLeft + cakeWidth / 3 - candleWidth / 2 , cakeTop);
+        //drawCandle(canvas, cakeLeft + (2 * cakeWidth) / 3 - candleWidth/2, cakeTop);
 
     }//onDraw
 
