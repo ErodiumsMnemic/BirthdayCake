@@ -54,13 +54,20 @@ public class CakeController implements View.OnClickListener, CompoundButton.OnCh
         if (cakeMod.balloon == true) {
             cakeMod.balloonX = motionEvent.getX();
             cakeMod.balloonY = motionEvent.getY();
-            cakeView.invalidate();
         } else {
             cakeMod.balloon = true;
             cakeMod.balloonX = motionEvent.getX();
             cakeMod.balloonY = motionEvent.getY();
-            cakeView.invalidate();
         }
+
+        float x = motionEvent.getX();
+        float y = motionEvent.getY();
+
+        cakeMod.x = x;
+        cakeMod.y = y;
+        cakeView.invalidate();
+
+
         return false;
     }
 }
