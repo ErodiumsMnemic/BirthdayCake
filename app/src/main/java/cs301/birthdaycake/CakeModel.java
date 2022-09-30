@@ -6,4 +6,7 @@ public class CakeModel {
     public boolean frosting = true;
     public boolean candles = true;
     public String blowLightButton = "Blow Out";
+    public boolean balloon = false;
+    public float balloonX = 0;
+    public float balloonY = 0;
 }
